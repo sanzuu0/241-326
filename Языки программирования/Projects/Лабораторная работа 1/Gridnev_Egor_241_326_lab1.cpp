@@ -1,12 +1,7 @@
-#include <iostream>
-#include <bitset>
+// #include <iostream>
+// using namespace std;
 
-using std::cout;
-using std::cin;
-
-int main() {
-
-
-    
-    return 0;
-}
+// int main() {
+//     cout << "Hello, World!" << endl;
+//     return 0;
+// }
