@@ -9,6 +9,8 @@ using std::bitset;
 using std::endl;
 
 
+
+
 void myInformation() {
     cout << "Gridnev Egor Michailovich, 241-326\n\n";
 }
