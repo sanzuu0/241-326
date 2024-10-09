@@ -6,21 +6,21 @@
 using std::cin;
 using std::cout;
 using std::bitset;
+using std::hex;
 using std::endl;
-
-
+using std::boolalpha;
 
 
 void myInformation() {
-    cout << "Gridnev Egor Michailovich, 241-326\n\n";
+    cout << "Gridnev Egor Mihailovich, 241-326" << endl;
 }
 
 
 void printDataTypeInfo() {
 
-    cout << "Min int = " << INT_MIN 
-        << ", Max int = " << INT_MAX
-        << ", Size of int = " << sizeof(int) << " bytes\n";
+    cout << "Min int = " << INT_MIN
+         << ", Max int = " << INT_MAX
+         << ", Size of int = " << sizeof(int) << " bytes\n";
 
     cout << "Min unsigned int = " << 0
         << ", Max unsigned int = " << UINT_MAX
@@ -49,10 +49,11 @@ void printDataTypeInfo() {
     cout << "Min char = " << CHAR_MIN
         << ", Max char = " << CHAR_MAX
         << ", Size of char = " << sizeof(char) << " bytes\n";
-  
+
     cout << "Min bool = " << std::boolalpha << false
         << ", Max bool = " << std::boolalpha << true
         << ", Size of bool = " << sizeof(bool) << " bytes\n";
+
 }
 
 
@@ -60,10 +61,10 @@ void numberRepresentation() {
 
     int number;
 
-    cout << "\nВведите число:";
+    cout << "\nEnter a number:";
     cin >> number;
 
-    cout << "Двоичное представление: " << std::bitset<16>(number) << endl;
+    cout << "Binary representation: " << bitset<16>(number) << endl;
     cout << "bool: " << static_cast<bool>(number) << endl;
     cout << "double: " << static_cast<double>(number) << endl;
     cout << "char: " << static_cast<char>(number) << endl;
@@ -71,40 +72,40 @@ void numberRepresentation() {
 
 
 void solvingTheEquation() {
-  
+
     double a, b;
 
-    cout << "\nВведите коэффициенты a * x = b: ";
+    cout << "\nEnter the coefficients a * x = b:";
     cin >> a >> b;
-          
-    if (a != 0) {       
-        cout << a << " * x = " << b << endl;        
+
+    if (a != 0) {
+        cout << a << " * x = " << b << endl;
         cout << "x = " << b << " / " << a << endl;
         cout << "x = " << b / a << endl;
     } else {
-        cout << "error dividing by zero" << endl;      
-    }    
+        cout << "Error: dividing by zero" << endl;
+    }
 }
 
 
 void midPointOfTheSegment() {
 
     double a, b;
-          
-    cout << "\nВведите координаты отрезка на прямой: ";
+
+    cout << "\nEnter the coordinates of the segment on the straight line: ";
     cin >> a >> b;
 
-    cout << "Середина отрезка находится в точке с координатой: " << (a + b) / 2.0 << endl;      
+    cout << "The middle of the segment is located at the point with the coordinate: " << (a + b) / 2.0 << endl;
 }
 
 
 int main() {
 
-    myInformation();
-    printDataTypeInfo();
-    numberRepresentation();
-    solvingTheEquation();
-    midPointOfTheSegment();
+	myInformation();
+	printDataTypeInfo();
+	numberRepresentation();
+	solvingTheEquation();
+	midPointOfTheSegment();
 
-    return 0;
+	return 0;
 }

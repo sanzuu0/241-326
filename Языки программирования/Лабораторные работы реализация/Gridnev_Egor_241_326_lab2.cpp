@@ -12,12 +12,12 @@ using std::streamsize;
 
 void programMenu() {
 
-    cout << "\nМеню программы, для выбора действия введите соответствующую цифру:\n";
+    cout << "\nProgram Menu, enter the corresponding number to choose an action:" << endl;
 
-    cout << "  1. Числовой треугольник." << endl;
-    cout << "  2. Нахождение биномиальных коэффициентов." << endl;
-    cout << "  3. Вычисление среднего арифметического введенных точек на прямой, заданных своими координатами." << endl;
-    cout << "  4. Реализация выхода." << endl;
+    cout << "  1. Numerical triangle." << endl;
+    cout << "  2. Finding binomial coefficients." << endl;
+    cout << "  3. Calculating the arithmetic mean of the entered points on a line, given by their coordinates." << endl;
+    cout << "  4. Exit." << endl;
 }
 
 
@@ -25,10 +25,10 @@ void numericalTriangle() {
 
     int height;
 
-    cout << "\nВведите число: ";
-    
+    cout << "\nEnter a number:";
+
     while (!(cin >> height) || height <= 0) {
-        cout << "Неверный ввод. Пожалуйста, введите положительное целое число: ";
+        cout << "Invalid input. Please enter a positive integer:";
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
@@ -38,46 +38,46 @@ void numericalTriangle() {
             cout << j << " ";
         }
         cout << endl;
-    }      
+    }
 }
 
 
 long long binomialCoefficient(int n, int k) {
-    
+
     long long result = 1;
-    
-    if (k > n - k)  
-        k = n - k; // Оптимизация: C(n, k) == C(n, n-k)
+
+    if (k > n - k)
+        k = n - k; // Optimization: C(n, k) == C(n, n-k)
 
     for (int i = 0; i < k; ++i) {
         result *= (n - i);
         result /= (i + 1);
     }
-    
+
     return result;
 }
 
 
 void findingBinomialCoefficients() {
-    
+
     int n;
-    
-    cout << "\nВведите значение n: ";
-    
+
+    cout << "\nEnter the value of n:";
+
     while (!(cin >> n) || n < 0) {
-        cout << "Неверный ввод. Пожалуйста, введите неотрицательное целое число: ";
+        cout << "Invalid input. Please enter a non-negative integer:";
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
     for (int k = 0; k <= n; ++k) {
-        
+
         long long binomialCoeff = binomialCoefficient(n, k);
-        
+
         if (binomialCoeff > 0) {
             cout << "C(" << n << ", " << k << ") = " << binomialCoefficient(n, k) << endl;
         } else {
-            cout << "C(" << n << ", " << k << ") = Произошло переполнение" << endl;
+            cout << "C(" << n << ", " << k << ") = Overflow occurred" << endl;
         }
     }
 }
@@ -89,7 +89,7 @@ void calculatingTheArithmeticMean() {
     int count = 0;
     int element;
 
-    cout << "\nВведите координаты точек на прямой (нажмите 0 для завершения ввода): ";
+    cout << "\nEnter the coordinates of the points on a line (press 0 to finish input):";
 
     cin >> element;
 
@@ -98,31 +98,30 @@ void calculatingTheArithmeticMean() {
         count++;
         cin >> element;
     }
-
-    cout << "\nСреднее арифметическое: " << sum / count << endl;
+    cout << "\nArithmetic mean: " << (count == 0 ? 0 : sum / count) << endl;
 }
 
 
 int main() {
-    
+
     int position = 4;
 
     while (true) {
-        
+
         switch (position) {
 
             case 1:
-                cout << "\nВы выбрали числовой треугольник." << endl;
+                cout << "\nYou chose numerical triangle.";
                 numericalTriangle();
                 break;
 
             case 2:
-                cout << "\nВы выбрали Нахождение биномиальных коэффициентов." << endl;
+                cout << "\nYou chose Finding binomial coefficients.";
                 findingBinomialCoefficients();
                 break;
 
             case 3:
-                cout << "\nВы выбрали Вычисление среднего арифметического введенных точек на прямой, заданных своими координатами." << endl;
+                cout << "\nYou chose Calculating the arithmetic mean of the entered points on a line, given by their coordinates.";
                 calculatingTheArithmeticMean();
                 break;
 
@@ -131,22 +130,22 @@ int main() {
                 break;
 
             default:
-                cout << "Неверный формат ввода." << endl;
+                cout << "Invalid input format.";
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 break;
         }
 
-        cout << "\nВведите что хотите выбрать из меню: ";
-        
+        cout << "\nEnter your choice from the menu:";
+
         while (!(cin >> position) || position < 1 || position > 4) {
-            cout << "Неверный ввод. Пожалуйста, выберите цифру от 1 до 4: ";
+            cout << "Invalid input. Please choose a number between 1 and 4:";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
 
         if (position == 4) {
-            cout << "Программа завершена." << endl;
+            cout << "Program terminated." << endl;
             break;
         }
     }
