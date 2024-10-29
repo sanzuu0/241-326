@@ -12,7 +12,7 @@ using std::boolalpha;
 
 
 void myInformation() {
-    cout << "Gridnev Egor Mihailovich, 241-326" << endl;
+    cout << "Gridnev Egor Михайлович, 241-326" << endl;
 }
 
 
