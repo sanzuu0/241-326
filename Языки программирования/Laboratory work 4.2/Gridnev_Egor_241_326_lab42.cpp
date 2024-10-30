@@ -105,7 +105,7 @@ int main() {
         std::cout << "4. Получить название диска\n";
         std::cout << "5. Переименовать файл\n";
         std::cout << "6. Создать копию файла\n";
-        std::cout << "0. Выход\n";
+        std::cout << "7. Выход\n";
         std::cout << "Выберите действие: ";
         std::cin >> choice;
 
@@ -115,11 +115,13 @@ int main() {
                 std::cin >> file;
                 std::cout << "Расширение файла: " << file_format(file) << std::endl;
                 break;
+
             case 2:
                 std::cout << "Введите полный путь к файлу: ";
                 std::cin >> file;
                 std::cout << "Имя файла: " << file_name(file) << std::endl;
                 break;
+
             case 3:
                 std::cout << "Введите полный путь к файлу: ";
                 std::cin >> file;
@@ -130,34 +132,40 @@ int main() {
                 std::cin >> file;
                 std::cout << "Название диска: " << file_disk(file) << std::endl;
                 break;
+
             case 5:
                 std::cout << "Введите полный путь к файлу: ";
                 std::cin >> file;
                 std::cout << "Введите новое имя файла: ";
                 std::cin >> new_name;
+
                 if (file_rename(&file, new_name)) {
                     std::cout << "Новое полное имя файла: " << file << std::endl;
                 } else {
                     std::cout << "Ошибка переименования." << std::endl;
                 }
                 break;
+
             case 6:
                 std::cout << "Введите полный путь к файлу: ";
                 std::cin >> file;
+
                 if (file_copy(file)) {
                     std::cout << "Копия файла успешно создана." << std::endl;
                 } else {
                     std::cout << "Ошибка создания копии файла." << std::endl;
                 }
                 break;
+
             case 0:
                 std::cout << "Выход из программы.\n";
                 break;
+
             default:
                 std::cout << "Некорректный выбор. Пожалуйста, попробуйте снова.\n";
         }
 
-    } while (choice != 0);
+    } while (choice != 7);
 
     return 0;
 }
