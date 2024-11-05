@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильтр и карточки</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <ul class="menu-left">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#projects">Мои проекты</a></li>
+                </ul>
+                <ul class="menu-right">
+                    <li><a href="https://t.me/sanzuu0" target="_blank"><img src="images/telegram-logo.png" alt="Telegram"></a></li>
+                    <li><a href="mailto:egor@gridneff.ru" target="_blank"><img src="images/mail.png" alt="Mail"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Боковое меню с фильтром -->
+    <div class="container filter-and-cards">
+        <div class="filter-menu">
+            <div class="filter-icon">☰</div>
+            <div class="filter-options">
+                <h3>Фильтры</h3>
+                <input type="text" placeholder="Поиск...">
+                <ul>
+                    <li><input type="checkbox"> Проекты с GitHub</li>
+                    <li><input type="checkbox"> Статьи</li>
+                    <li><input type="checkbox"> Видеоконтент</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Карточки -->
+        <div class="cards">
+            <div class="card">
+                <img src="images/projects-img.jpg" alt="Image 2">
+                <div class="card-content">
+                    <h2>Название проекта</h2>
+                    <p>Краткое описание</p>
+                    <button onclick="window.location.href='https://github.com/xPoncho';">Перейти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <p><a href="https://github.com" target="_blank">GitHub</a></p>
+                <p><a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024.</p>
+        </div>
+    </footer>
+</body>
+</html>

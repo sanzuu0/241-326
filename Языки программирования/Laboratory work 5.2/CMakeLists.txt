@@ -3,4 +3,4 @@ project(Laboratory_work_5_2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Laboratory_work_5_2 main.cpp)
+add_executable(Laboratory_work_5_2 Gridnev_Egor_241_326_lab52.cpp)

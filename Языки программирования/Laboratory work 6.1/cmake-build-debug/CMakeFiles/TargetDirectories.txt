@@ -1,0 +1,3 @@
+/Users/macbook/educational/241-326/Языки программирования/Laaboratory work 6.1/cmake-build-debug/CMakeFiles/Laaboratory_work_6_1.dir
+/Users/macbook/educational/241-326/Языки программирования/Laaboratory work 6.1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/macbook/educational/241-326/Языки программирования/Laaboratory work 6.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

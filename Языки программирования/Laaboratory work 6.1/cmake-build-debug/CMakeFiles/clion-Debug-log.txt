@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/macbook/educational/241-326/Языки программирования/Laaboratory work 6.1 Select CMakeLists.txt
